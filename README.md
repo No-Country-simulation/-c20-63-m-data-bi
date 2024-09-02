@@ -76,7 +76,7 @@ Deploy:
 
 |                         | Nombre   |   Rol                    | GitHub & LinkedIn                                                                                                                                                                                          |
 | ----------------------------- | -------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img width="60" height="60" src="https://avatars.githubusercontent.com/u/110987078?v=4" alt="Angel" /> | Sergio Rivera Bustamante | Data Scientist | [![Github](https://skillicons.dev/icons?i=github)](https://github.com/Sergius-DS) [![Linkedin](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/sergio-rivera-bustamante-6642b836/)                         |
+| <img width="60" height="60" src="https://avatars.githubusercontent.com/u/Sergius-DS?v=4" alt="Sergius Avatar" /> | Sergio Rivera Bustamante | Data Scientist | [![Github](https://skillicons.dev/icons?i=github)](https://github.com/Sergius-DS) [![Linkedin](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/sergio-rivera-bustamante-6642b836/)                         |
 |                               |
 
 
