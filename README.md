@@ -66,10 +66,6 @@ Dashboard:
 
 Deploy: 
 
-<p align="center">
-  <img src="images/"  height="200">
-<p align="center">
-
 
 
 ## Colaboradores
