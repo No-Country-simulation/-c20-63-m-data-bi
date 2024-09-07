@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 
 # Your GitHub Personal Access Token (PAT)
-token = "GHSAT0AAAAAACUFGUDGAY2LLEBLLJEE74FMZW4Y6TA"
+token = "GHSAT0AAAAAACUFGUDHWTOAQOLVP23Z67C2ZW4ZJSQ"
 
 # URL to the raw file in the private repository
 url = "https://raw.githubusercontent.com/No-Country-simulation/-c20-63-m-data-bi/main/carrito.csv"
