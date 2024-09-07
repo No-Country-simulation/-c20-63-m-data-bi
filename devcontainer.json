@@ -1,0 +1,9 @@
+{
+    "image": "python:3.9-slim",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
+    ],
+    "workspaceFolder": "/app",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached",
+    "postCreateCommand": "pip install streamlit"
+}
