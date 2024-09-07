@@ -1,26 +1,28 @@
 import streamlit as st
 import pandas as pd
 import requests
+from github import Github
+import io
 
-# Your GitHub Personal Access Token (PAT)
-token = "GHSAT0AAAAAACUFGUDHWTOAQOLVP23Z67C2ZW4ZJSQ"
 
-# URL to the raw file in the private repository
-url = "https://raw.githubusercontent.com/No-Country-simulation/-c20-63-m-data-bi/main/carrito.csv"
+# Assuming you have a GitHub token stored securely, not hardcoded
+g = Github("GHSAT0AAAAAACUFGUDHWTOAQOLVP23Z67C2ZW4ZJSQ")
 
-# Set up headers for authentication
-headers = {
-    "Authorization": f"token {token}"
-}
+repo = g.get_repo("No-Country-simulation/-c20-63-m-data-bi")
+contents = repo.get_contents("main/carrito.csv")
 
-# Fetch the CSV file
-response = requests.get(url, headers=headers)
+# Decode the content if it's base64 encoded
+import base64
+file_content = base64.b64decode(contents.content).decode()
 
 st.title("Hello DS")
 
 st.info("This app builds a ML model")
 
-from io import StringIO
-csv_data = StringIO(response.text)
-df = pd.read_csv(csv_data)
+df = pd.read_csv(io.StringIO(file_content))
 df
+
+
+
+
+
