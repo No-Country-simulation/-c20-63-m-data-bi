@@ -188,4 +188,36 @@ with st.expander('**Varibles Prueba y Entrenamiento**'):
     # Display the classification report in Streamlit
     st.text("**Reporte de Clasificación**:")
     st.text(report)
+
+with st.expander('**Predicción Categoría**'):
+    # Encode categorical variables in input_df
+    input_df = pd.get_dummies(input_df)
+
+    # Ensure the columns in input_df match the columns in X_train
+    input_df = input_df.reindex(columns=X_train.columns, fill_value=0)
+
+    # Scale input_df using the same scaler
+    input_df_scaled = scaler.transform(input_df)
+
+    # Get the predicted probabilities for input_df
+    input_proba = xgb.predict_proba(input_df_scaled)
+
+    # Print the predicted probabilities
+    st.write(input_proba)
+
+    # Get the class with the highest probability
+    predicted_class = np.argmax(input_proba)
+
+    # Map the predicted class to the corresponding reason for abandonment
+    reason_mapper = {0: 'Better alternative offer',
+                    1: 'Change in price',
+                    2: 'Lack of trust',
+                    3: 'No preferred mode of payment',
+                    4: 'Promo code not applicable'}
+
+    predicted_reason = reason_mapper[predicted_class]
+
+    # Print the predicted reason
+    st.write('**Predicted Reason for Abandonment**')
+    st.write(predicted_reason)
     
