@@ -219,5 +219,5 @@ with st.expander('**Predicción Categoría**'):
 
     # Print the predicted reason
     st.write('**Predicted Reason for Abandonment**')
-    st.write(predicted_reason)
+    st.success(predicted_reason)
     
