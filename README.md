@@ -31,11 +31,16 @@ Este proyecto tiene como objetivo analizar los datos del Set de Datos llamado E-
 ## Requisitos
 
 - Python 3.x
+- jupyter
+- streamlit
 - pandas
 - matplotlib
+- altair
 - seaborn
 - numpy
-- jupyter 
+- scikit-learn
+- imbalanced-learn
+- xgboost
 
 ## Instalación
 
