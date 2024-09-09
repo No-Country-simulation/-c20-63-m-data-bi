@@ -1,9 +1,8 @@
 {
-    "image": "python:3.9-slim",
-    "mounts": [
-        "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached"
-    ],
-    "workspaceFolder": "/app",
-    "workspaceMount": "source=${localWorkspaceFolder},target=/app,type=bind,consistency=cached",
-    "postCreateCommand": "pip install streamlit"
+    "name": "Python 3",
+    "image": "mcr.microsoft.com/devcontainers/python:3",
+    "postCreateCommand": "bash .devcontainer/setup.sh",
+    "settings": {
+        "python.defaultInterpreterPath": "/workspaces/${localWorkspaceFolderBasename}/.venv/bin/python"
+    }
 }
