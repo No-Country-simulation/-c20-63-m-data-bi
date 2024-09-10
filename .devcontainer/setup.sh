@@ -6,10 +6,12 @@ if [ ! -d "/workspaces/${PWD##*/}/.venv" ]; then
 fi
 
 # Activate virtual environment
-source /workspaces/${PWD##*/}/.venv/bin/activate
+if [ -n "$CODESPACES" ]; then
+    source /workspaces/${PWD##*/}/.venv/bin/activate
+else
+    # Add venv activation to bash startup script for local development
+    echo "source /workspaces/${PWD##*/}/.venv/bin/activate" >> ~/.bashrc
+fi
 
 # Install requirements
 pip install -r requirements.txt
-
-# Add venv activation to bash startup script
-echo "source /workspaces/${PWD##*/}/.venv/bin/activate" >> ~/.bashrc
