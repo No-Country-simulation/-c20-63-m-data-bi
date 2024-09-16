@@ -18,7 +18,9 @@
 
 ## Descripción
 
-Este proyecto tiene como objetivo analizar los datos del Set de Datos llamado E-commerce que viene en formato excel, obtener insights sobre los factores que pueden estar influyendo en la deserción de clientes, el impacto de ciertas columnas en la correlación de datos. Utiliza técnicas de análisis de datos y visualización para interpretar y comunicar los resultados.
+Este proyecto tiene como objetivo analizar los datos del Set de Datos llamado E-commerce que viene en formato excel, obtener insights sobre los factores que pueden estar influyendo en la deserción de clientes, el impacto de ciertas columnas en la correlación de datos. Utilizar técnicas de análisis de datos y visualización para interpretar y comunicar los resultados.
+
+Crear una aplicación con un modelo predictivo de aprendizaje supervisado, utilizando Streamlit para su despliegue.
 
 ## Características
 
