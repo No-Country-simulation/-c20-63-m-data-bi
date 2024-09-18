@@ -21,7 +21,7 @@ st.info("🚀Esta Aplicación construye un modelo de Machine Learning🚀")
 
 with st.expander('Data'):
     st.write('**Raw Data**')
-    df = pd.read_csv('/data/procesados/carrito.csv', index_col=False)
+    df = pd.read_csv('./data/procesados/carrito.csv', index_col=False)
     df = df.drop(df.columns[0], axis=1)
     df
 
