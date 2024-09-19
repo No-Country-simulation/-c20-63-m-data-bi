@@ -15,7 +15,7 @@ from sklearn.metrics import roc_auc_score
 from sklearn.metrics import classification_report
 
 
-st.title("👋Hello DS👋")
+st.title("👋 DATA SCIENCE👋")
 
 st.info("🚀Esta Aplicación construye un modelo de Machine Learning🚀")
 
@@ -202,8 +202,30 @@ with st.expander('**Predicción Categoría**'):
     # Get the predicted probabilities for input_df
     input_proba = xgb.predict_proba(input_df_scaled)
 
-    # Print the predicted probabilities
     st.write(input_proba)
+
+
+    # Get the index of the column with the highest probability for each row
+    max_prob_idx = np.argmax(input_proba, axis=1)
+
+    # Create a new dataframe with only the highest probability for each row
+    max_prob_df = pd.DataFrame(input_proba[np.arange(input_proba.shape[0]), max_prob_idx], columns=['Probability'])
+
+    # Display the progress bar for the column with the highest probability
+    st.dataframe(
+        max_prob_df,
+        column_config={
+            'Probability': st.column_config.ProgressColumn(
+                label="Probability",
+                format='%0.3f',
+                width='medium',
+                min_value=0,
+                max_value=1
+            )
+        },
+        hide_index=True
+    )
+
 
     # Get the class with the highest probability
     predicted_class = np.argmax(input_proba)
@@ -218,6 +240,5 @@ with st.expander('**Predicción Categoría**'):
     predicted_reason = reason_mapper[predicted_class]
 
     # Print the predicted reason
-    st.write('**Predicted Reason for Abandonment**')
+    st.write('**Motivo Predicho de Abandono**')
     st.success(predicted_reason)
-    
