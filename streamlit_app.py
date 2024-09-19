@@ -15,9 +15,9 @@ from sklearn.metrics import roc_auc_score
 from sklearn.metrics import classification_report
 
 
-st.title("👋 DATA SCIENCE👋")
+st.title("📈 DATA SCIENCE 📈")
 
-st.info("🚀Esta Aplicación construye un modelo de Machine Learning🚀")
+st.info("🚀 Aplicación Modelo Predictivo Multi-Clases Machine Learning 🚀")
 
 with st.expander('Data'):
     st.write('**Raw Data**')
@@ -216,7 +216,7 @@ with st.expander('**Predicción Categoría**'):
         max_prob_df,
         column_config={
             'Probability': st.column_config.ProgressColumn(
-                label="Probability",
+                label="Probabilidad",
                 format='%0.3f',
                 width='medium',
                 min_value=0,
@@ -225,7 +225,6 @@ with st.expander('**Predicción Categoría**'):
         },
         hide_index=True
     )
-
 
     # Get the class with the highest probability
     predicted_class = np.argmax(input_proba)
