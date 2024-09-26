@@ -1,0 +1,14 @@
+# Python
+*.pyc
+__pycache__
+.pytest_cache
+.mypy_cache
+.coverage
+.DS_Store
+venv/
+.venv/
+.git/
+
+# IDEs and Editors
+.idea/
+.vscode/
